@@ -8,8 +8,14 @@ export default {
     extend: {
       color: {
         primary: '#FE724C'
+      },
+      backgroundColor: {
+        primary: '#FE724C'
       }
     },
+    fontFamily: {
+      sans: ["opensans"]
+    }
   },
   plugins: [],
 }

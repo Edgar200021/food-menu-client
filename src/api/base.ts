@@ -2,7 +2,8 @@ import axios from "axios"
 
 
 export const $http = axios.create({
-		withCredentials: true
+		withCredentials: true,
+		baseURL: "http://localhost:4000/api/v1"
 });
 
 $http.interceptors.response.use(config => config, async (error) => {
@@ -13,7 +14,7 @@ $http.interceptors.response.use(config => config, async (error) => {
 			 await axios.post('api/v1/auth/refresh', {}, {withCredentials: true})
 			return $http.request(originalRequest)
 		} catch(e) {
-			window.location.replace('/auth/login')
+			window.location.replace('/auth/sign-in')
 		}
 	} else {
 		throw error
