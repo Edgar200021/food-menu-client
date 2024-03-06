@@ -14,7 +14,7 @@ $http.interceptors.response.use(config => config, async (error) => {
 			 await axios.post('api/v1/auth/refresh', {}, {withCredentials: true})
 			return $http.request(originalRequest)
 		} catch(e) {
-			window.location.replace('/auth/sign-in')
+			window.location.replace('')
 		}
 	} else {
 		throw error

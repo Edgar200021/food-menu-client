@@ -5,6 +5,6 @@ import {UserContextProvider} from "./context/UserContext.tsx";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 		<UserContextProvider>
-		<App />
+			<App />
 		</UserContextProvider>
 )
